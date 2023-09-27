@@ -1,0 +1,9 @@
+body {
+    background-color: #F0AF56;
+}
+
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+    }
+}
