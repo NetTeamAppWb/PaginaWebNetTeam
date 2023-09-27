@@ -1,6 +1,7 @@
 <script setup>
 import RestaurantsOptions from "@/components/restaurant-options.vue";
 import ToolbarRestaurants from "@/components/toolbar.vue";
+import Historial from "@/components/Historial.vue";
 </script>
 
 <template>
@@ -15,7 +16,9 @@ import ToolbarRestaurants from "@/components/toolbar.vue";
 
   <main>
     <router-view></router-view>
+    <Historial></Historial>
   </main>
+
 
 </template>
 
