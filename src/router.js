@@ -1,8 +1,10 @@
 import {createRouter,createWebHistory} from "vue-router";
 import RestaurantOptions from "@/components/restaurant-options.vue";
+import profileComponent from "./components/profile.component.vue";
 
 const routes=[
     {path:"/"},
+    {path:"/profile",component: profileComponent},
     {path:"/restaurants",component: RestaurantOptions}
 ]
 

@@ -1,5 +1,5 @@
 <script setup>
-import HistorialItem from './HistorialItem.vue'
+import HistorialItem from './HistoriaItem.vue'
 </script>
 
 <template>

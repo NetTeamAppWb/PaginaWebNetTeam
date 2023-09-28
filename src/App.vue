@@ -11,6 +11,7 @@ import Historial from "@/components/Historial.vue";
 
   <nav>
     <router-link to="/">Home</router-link>
+      <router-link to="/profile">Perfil</router-link>
     <router-link to="/restaurants">Restaurants</router-link>
   </nav>
 
