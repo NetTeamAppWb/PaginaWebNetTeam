@@ -1,19 +1,59 @@
 <script>
+import { useRouter } from 'vue-router';
 export default {
   name: 'Toolbar-restaurants',
+  setup() {
+    const router = useRouter();
+
+    const StartSreen =()=>{
+      router.push('/start');
+    };
+    const RestaurantScreen = () => {
+      router.push('/restaurants');
+    };
+
+    const OrdersSreen =()=>{
+      router.push('/orders-history');
+    };
+
+    const OffersSreen =()=>{
+      router.push('/offers')
+    };
+    const PagesSreen = () => {
+      router.push('/pages');
+    };
+
+    const ProfileSreen = ()=>{
+      router.push('/profile');
+    };
+
+    return {
+      StartSreen,
+      RestaurantScreen,
+      OrdersSreen,
+      OffersSreen,
+      PagesSreen,
+      ProfileSreen,
+    };
+  },
 };
 </script>
 
 <template>
   <div class="toolbar">
     <div class="left">
-      <img src="@/assets/logo.jpeg" alt="logoEmprendeChef" class="logo-image">
-      <span class="logo">EmprendeChef</span>
-      <button class="button">Restaurante</button>
-      <button class="button">Pedidos</button>
+      <!-- Logo de EmprendeChef -->
+      <img src="@/assets/logoNetTeam.png" alt="logoEmprendeChef" class="logo-image">
+      <span class="logo">{{$t("namelog")}}</span>
     </div>
     <div class="right">
-      <input type="text" class="search" placeholder="Buscar...">
+      <!-- Botones de navegación -->
+      <button class="button" @click="StartSreen">{{$t("start")}}</button>
+      <button class="button" @click="RestaurantScreen">{{$t("restaurant")}}</button>
+      <button class="button" @click="OrdersSreen">{{$t("orders")}}</button>
+      <button class="button" @click="OffersSreen">{{$t("offers")}}</button>
+      <button class="button" @click="PagesSreen">{{$t("membership")}}</button>
+      <button class="button" @click="ProfileSreen">{{$t("profile")}}</button>
     </div>
   </div>
 </template>
@@ -54,18 +94,6 @@ export default {
   align-items: center;
 }
 
-.search {
-  padding: 8px 10px;
-  border: 2px solid #333;
-  border-radius: 5px;
-  outline: none;
-  width: 400px;
-  transition: border-color 0.3s;
-}
-
-.search:focus {
-  border-color: #007bff;
-}
 
 .logo-image {
   width: 110px;

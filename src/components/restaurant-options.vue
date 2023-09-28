@@ -24,6 +24,10 @@ export default{
 </script>
 
 <template>
+  <div class="right">
+    <input type="text" class="search" placeholder="Search...">
+  </div>
+
   <div class="card-container">
     <!-- Primer card -->
     <div class="card">
@@ -32,11 +36,12 @@ export default{
           <img :src="images.restaurants1" alt="restaurants1">
         </div>
         <div class="restaurant-info">
-          <h2>Nombre del Restaurante</h2>
-          <p>Ubicación: Ciudad, País</p>
-          <p>Tiempo de Atención: Horario</p>
-          <p>Comidas: Tipo de Comidas</p>
-          <p>Fechas No Laborables: Fechas</p>
+          <h2>{{$t("restaurant1")}}</h2>
+          <p>{{$t("location1")}}</p>
+          <p>{{$t("servicetime1")}}</p>
+          <p>{{$t("meals1")}}</p>
+          <p>{{$t("dates1")}}</p>
+          <button class="info-button">{{$t("information1")}}</button>
         </div>
       </div>
     </div>
@@ -48,11 +53,12 @@ export default{
           <img :src="images.restaurants2" alt="restaurants2">
         </div>
         <div class="restaurant-info">
-          <h2>Nombre del Restaurante 2</h2>
-          <p>Ubicación: Ciudad 2, País 2</p>
-          <p>Tiempo de Atención: Horario 2</p>
-          <p>Comidas: Tipo de Comidas 2</p>
-          <p>Fechas No Laborables: Fechas 2</p>
+          <h2>{{$t("restaurant2")}}</h2>
+          <p>{{$t("location2")}}</p>
+          <p>{{$t("servicetime2")}}</p>
+          <p>{{$t("meals2")}}</p>
+          <p>{{$t("dates2")}}</p>
+          <button class="info-button">{{$t("information2")}}</button>
         </div>
       </div>
     </div>
@@ -64,11 +70,12 @@ export default{
           <img :src="images.restaurants3" alt="restaurants3">
         </div>
         <div class="restaurant-info">
-          <h2>Nombre del Restaurante 3</h2>
-          <p>Ubicación: Ciudad 3, País 3</p>
-          <p>Tiempo de Atención: Horario 3</p>
-          <p>Comidas: Tipo de Comidas 3</p>
-          <p>Fechas No Laborables: Fechas 3</p>
+          <h2>{{$t("restaurant3")}}</h2>
+          <p>{{$t("location3")}}</p>
+          <p>{{$t("servicetime3")}}</p>
+          <p>{{$t("meals3")}}</p>
+          <p>{{$t("dates3")}}</p>
+          <button class="info-button">{{$t("information3")}}</button>
         </div>
       </div>
     </div>
@@ -80,11 +87,12 @@ export default{
           <img :src="images.restaurants4" alt="restaurants4">
         </div>
         <div class="restaurant-info">
-          <h2>Nombre del Restaurante 4</h2>
-          <p>Ubicación: Ciudad 4, País 4</p>
-          <p>Tiempo de Atención: Horario 4</p>
-          <p>Comidas: Tipo de Comidas 4</p>
-          <p>Fechas No Laborables: Fechas 4</p>
+          <h2>{{$t("restaurant4")}}</h2>
+          <p>{{$t("location4")}}</p>
+          <p>{{$t("servicetime4")}}</p>
+          <p>{{$t("meals4")}}</p>
+          <p>{{$t("dates4")}}</p>
+          <button class="info-button">{{$t("information4")}}</button>
         </div>
       </div>
     </div>
@@ -107,12 +115,16 @@ export default{
   /* Estilo para el contenedor de los cards */
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .card-content {
   /* Estilo para el contenido del card */
   display: flex;
-  padding: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+
 }
 
 .restaurant-image {
@@ -143,6 +155,35 @@ p {
   /* Estilo para la información */
   font-size: 14px;
   margin-bottom: 5px;
+}
+
+.search {
+  padding: 8px 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  width: 400px;
+  transition: border-color 0.3s;
+  margin-top: 20px;
+}
+
+.search:focus {
+  border-color: #007bff;
+}
+
+.info-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px; /* Espacio superior para separarlo del texto */
+  float: right; /* Coloca el botón a la derecha */
+}
+
+.info-button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
 }
 </style>
 
