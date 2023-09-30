@@ -7,6 +7,7 @@ export default{
 </script>
 
 <template>
+  hola, falta completar uno de los integrantes
 
 </template>
 
