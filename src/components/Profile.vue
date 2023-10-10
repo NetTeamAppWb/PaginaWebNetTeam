@@ -66,9 +66,4 @@ export default {
   object-fit: cover;
 }
 
-.informacion-perfil {
-  /* Estilos para la información del perfil */
-}
-
-/* Estilos adicionales según tus preferencias */
 </style>
