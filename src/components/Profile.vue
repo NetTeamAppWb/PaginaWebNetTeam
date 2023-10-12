@@ -7,7 +7,7 @@
         <img src="@/assets/perfil.jpg" alt="Foto de perfil">
       </div>
 
-      <!-- Información del perfil -->
+
       <div class="informacion-perfil">
         <h2>{{$t("profile1")}} {{ nombreCompleto }}</h2>
         <p>{{$t("profile2")}} {{ email }}</p>
