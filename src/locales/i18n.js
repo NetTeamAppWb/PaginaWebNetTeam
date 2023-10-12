@@ -51,6 +51,14 @@ const i18n= createI18n({
             profile4:'Favorite Dishes: ',
             profile5:'Payment methods: ',
             profile6:'Counting Time: ',
+            explore:'Look at the restaurants that are closest to you:',
+            food:'These are the silver most requested by our users:',
+            food1:'Grilled chicken',
+            food2:'Makis',
+            food3:'Ceviche',
+            food11:'Maki sushi is therefore a nori seaweed roll filled with rice and different ingredients such as fish, seafood, fruits or vegetables',
+            food22:'Grilled chicken is the name given in Peru to chicken roasted over charcoal, wood or gas in a rotating system',
+            food33:'Dish prepared with raw fish marinated in lemon juice and seasoned with other ingredients that vary depending on the region.',
         },
         es:{
             namelog:'EmprendeChef',
@@ -100,6 +108,14 @@ const i18n= createI18n({
             profile4:'Platos Favoritos: ',
             profile5:'Metodos Pagos: ',
             profile6:'Tiempo Cuenta: ',
+            explore:'Mira los restaurantes que esten mas cerca de ti:',
+            food:'Eston son los plata mas pedidos por nuestros usuarios',
+            food1:'Pollo a la brasa',
+            food2:'Makis',
+            food3:'Ceviche',
+            food11:'El maki sushi es por tanto un rollo de alga nori relleno de arroz y distintos ingredientes como pescado, marisco, frutas o verduras',
+            food22:'Pollo a la brasa es la denominación que se da en el Perú al pollo asado al carbón, a la leña o a gas en un sistema rotatorio',
+            food33:'Platillo preparado con pescado crudo marinado en jugo de limón y condimentado con otros ingredientes que varían según la región',
         }
     }
 })
