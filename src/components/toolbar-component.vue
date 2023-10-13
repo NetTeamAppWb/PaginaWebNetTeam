@@ -6,7 +6,7 @@ export default {
     const router = useRouter();
 
     const StartSreen =()=>{
-      router.push('/start');
+      router.push('/home');
     };
     const RestaurantScreen = () => {
       router.push('/restaurants');
@@ -27,6 +27,10 @@ export default {
       router.push('/profile');
     };
 
+    const ExitSreen = ()=>{
+      router.push('/exit');
+    };
+
     return {
       StartSreen,
       RestaurantScreen,
@@ -34,6 +38,7 @@ export default {
       OffersSreen,
       PagesSreen,
       ProfileSreen,
+      ExitSreen
     };
   },
 };
@@ -48,12 +53,14 @@ export default {
     </div>
     <div class="right">
       <!-- Botones de navegación -->
-      <button class="button" @click="StartSreen">{{$t("start")}}</button>
+      <button class="button" @click="StartSreen"> {{$t("Home")}} </button>
       <button class="button" @click="RestaurantScreen">{{$t("restaurant")}}</button>
       <button class="button" @click="OrdersSreen">{{$t("orders")}}</button>
       <button class="button" @click="OffersSreen">{{$t("offers")}}</button>
       <button class="button" @click="PagesSreen">{{$t("membership")}}</button>
       <button class="button" @click="ProfileSreen">{{$t("profile")}}</button>
+      <button class="button" @click="ExitSreen"><i class="pi pi-sign-out" style="font-size: 1.5rem"></i>
+      </button>
     </div>
   </div>
 </template>

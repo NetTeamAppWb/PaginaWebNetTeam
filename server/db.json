@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "email": "jorgito@gmail.com",
+      "password": "euibuhbcd",
+      "name": "Jorgito",
+      "address": "miraflores",
+      "phoneNumber": "983412673",
+      "description": "hola me gusta mucho jugar en la play station",
+      "age": "32",
+      "paymentMethods": [
+        "Paypal"
+      ],
+      "id": 1
+    }
+  ],
+  "restaurants": []
+}

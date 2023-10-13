@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <ToolbarRestaurants/>
+  </header>
     <div>
         <h1>{{$t("explore")}}</h1>
         <GoogleMap api-key="AIzaSyCQql0ChGSqMW2sG4F9nD4LnHsqOwLTY54" style="width: 100%; height: 400px" :center="centro" :zoom="15">
@@ -34,29 +37,31 @@
             </template>
         </Card>
 
-            <Card class="card-item" style="width: 25em">
-                <template #header>
-                    <img alt="user header" src="@/assets/Ceviche.jpg" width="400" height="200"/>
-                </template>
-                <template #title>{{$t("food3")}} </template>
-                <template #content>
-                    <p>{{$t("food33")}}</p>
-                </template>
-                <template #footer>
-                    <pv-button icon="pi pi-check" label="Order" />
-                    <pv-button icon="pi pi-times" label="Cancel" severity="secondary" style="margin-left: 0.5em" />
-                </template>
-            </Card>
-            </div>
+          <Card class="card-item" style="width: 25em">
+            <template #header>
+              <img alt="user header" src="@/assets/Ceviche.jpg" width="400" height="200"/>
+            </template>
+            <template #title>{{$t("food3")}} </template>
+            <template #content>
+              <p>{{$t("food33")}}</p>
+            </template>
+            <template #footer>
+              <pv-button icon="pi pi-check" label="Order" />
+              <pv-button icon="pi pi-times" label="Cancel" severity="secondary" style="margin-left: 0.5em" />
+            </template>
+          </Card>
+        </div>
     </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
 import { GoogleMap, Marker } from "vue3-google-map";
+import ToolbarRestaurants from "@/components/toolbar-component.vue";
 
 export default defineComponent({
-    components: { GoogleMap, Marker },
+  name:"home",
+  components: {ToolbarRestaurants, GoogleMap, Marker },
     data() {
         return {
             centro: { lat: -12.090539, lng: -77.029576 },
@@ -73,13 +78,8 @@ export default defineComponent({
 }
 
 .card-item {
-    width: calc(33.33% - 10px); /* Para dos tarjetas en una fila, con margen entre ellas */
+    width: calc(33.33% - 10px);
     margin-bottom: 20px;
 }
-
-
-
-
-
 
 </style>

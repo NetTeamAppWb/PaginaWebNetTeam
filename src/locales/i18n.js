@@ -1,16 +1,17 @@
 import {createI18n} from "vue-i18n";
 
 const i18n= createI18n({
-    locale:'en',
+    locale:'es',
     messages:{
         en:{
             namelog:'UndertakeChef',
-            start:'Start',
+            Home:'Home',
             restaurant:'Restaurant',
             orders:'Order History',
             offers:'Offers',
             membership:'Membership',
             profile:'Profile',
+            exit:'exit',
             restaurant1:'Name Restaurant 1',
             restaurant2:'Name Restaurant 2',
             restaurant3:'Name Restaurant 3',
@@ -59,15 +60,18 @@ const i18n= createI18n({
             food11:'Maki sushi is therefore a nori seaweed roll filled with rice and different ingredients such as fish, seafood, fruits or vegetables',
             food22:'Grilled chicken is the name given in Peru to chicken roasted over charcoal, wood or gas in a rotating system',
             food33:'Dish prepared with raw fish marinated in lemon juice and seasoned with other ingredients that vary depending on the region.',
+            titlepage:'Route not found',
+            page:'Home',
         },
         es:{
             namelog:'EmprendeChef',
-            start:'Inicio',
-            restaurant:'Restaurante',
+            Home:'Inicio',
+            restaurant:'Restaurantes',
             orders:'Historial Pedidos',
             offers:'Ofertas',
-            membership:'Menbresia',
+            membership:'Membresía',
             profile:'Perfil',
+            exit:'Salir',
             restaurant1:'Nombre Restaurante 1',
             restaurant2:'Nombre Restaurante 2',
             restaurant3:'Nombre Restaurante 3',
@@ -116,6 +120,8 @@ const i18n= createI18n({
             food11:'El maki sushi es por tanto un rollo de alga nori relleno de arroz y distintos ingredientes como pescado, marisco, frutas o verduras',
             food22:'Pollo a la brasa es la denominación que se da en el Perú al pollo asado al carbón, a la leña o a gas en un sistema rotatorio',
             food33:'Platillo preparado con pescado crudo marinado en jugo de limón y condimentado con otros ingredientes que varían según la región',
+            titlepage:'Ruta no encontrada',
+            page:'Inicio',
         }
     }
 })

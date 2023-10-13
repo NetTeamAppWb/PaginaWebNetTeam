@@ -1,4 +1,7 @@
 <template>
+  <header>
+    <ToolbarRestaurants/>
+  </header>
   <div class="perfil">
     <!-- Card de perfil -->
     <div class="card-perfil">
@@ -22,7 +25,11 @@
 </template>
 
 <script>
+import ToolbarRestaurants from "@/components/toolbar-component.vue";
+
 export default {
+  name:"profile",
+  components: {ToolbarRestaurants},
   data() {
     return {
       nombreCompleto: "Ana Alcantara, Morales",

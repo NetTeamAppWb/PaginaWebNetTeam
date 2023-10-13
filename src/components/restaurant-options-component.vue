@@ -4,9 +4,11 @@ import restaurants2 from '@/assets/restaurante2.png';
 import restaurants3 from '@/assets/restaurante3.png';
 import restaurants4 from '@/assets/restaurante4.png';
 import Card from "primevue/card";
+import ToolbarRestaurants from "@/components/toolbar-component.vue";
 export default{
   name:"restaurants-options",
   components: {
+    ToolbarRestaurants,
     Card,
   },
   data() {
@@ -24,6 +26,9 @@ export default{
 </script>
 
 <template>
+  <header>
+    <ToolbarRestaurants/>
+  </header>
   <div class="right">
     <input type="text" class="search" placeholder="Search...">
   </div>
