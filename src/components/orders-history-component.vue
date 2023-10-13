@@ -1,10 +1,16 @@
 <script>
+import ToolbarRestaurants from "@/components/toolbar-component.vue";
+
 export default {
   name:"orders-history",
+  components: {ToolbarRestaurants},
 };
 </script>
 
 <template>
+  <header>
+    <ToolbarRestaurants/>
+  </header>
   <div>
     <div>
       <h2 class="titulo">{{$t("ordershistory")}}</h2>
