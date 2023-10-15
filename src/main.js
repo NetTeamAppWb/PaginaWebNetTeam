@@ -13,6 +13,7 @@ import 'primevue/resources/primevue.min.css';
 import InputText from 'primevue/inputtext';
 import MultiSelect from 'primevue/multiselect';
 import Textarea from 'primevue/textarea';
+import Calendar from 'primevue/calendar';
 
 
 import router from "@/router";
@@ -28,6 +29,8 @@ app.component("pv-button", Button);
 app.component('pv-input-text', InputText);
 app.component('MultiSelect', MultiSelect);
 app.component('Textarea', Textarea);
+app.component("Card", Card);
+app.component("Calendar", Calendar);
 
 app.mount('#app')
 
