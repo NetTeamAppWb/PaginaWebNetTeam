@@ -12,6 +12,20 @@
         "Paypal"
       ],
       "id": 1
+    },
+    {
+      "email": "mario456@gmail.com",
+      "password": "contramar135/",
+      "name": "Mario",
+      "address": "Comas",
+      "phoneNumber": "981456234",
+      "description": "Me gusta la comida tipica del Peru",
+      "age": "25",
+      "paymentMethods": [
+        "Yape",
+        "Plin"
+      ],
+      "id": 2
     }
   ],
   "restaurants": []

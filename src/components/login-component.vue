@@ -12,7 +12,8 @@ export default{
   methods: {
     async attemptLogin() {
       try {
-        const response = await UserApiService.getUserByEmailAndPassword(
+        const userApiService = new UserApiService();
+        const response = await userApiService.getUserByEmailAndPassword(
             this.email,
             this.password
         );

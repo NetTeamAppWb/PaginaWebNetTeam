@@ -1,5 +1,4 @@
 <script setup>
-import ToolbarRestaurants from "@/components/toolbar-component.vue";
 </script>
 
 <template>

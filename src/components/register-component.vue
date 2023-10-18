@@ -1,8 +1,8 @@
 <script>
-import axios from "axios";
+import {UserApiService} from "@/services/user-api.service";
 
 export default {
-  name:"register",
+  name: "register",
   data() {
     return {
       email: '',
@@ -23,8 +23,7 @@ export default {
   },
   methods: {
     async registerUser() {
-
-      if (!this.email || !this.password || !this.name || !this.phoneNumber || !this.paymentMethods) {
+      if (!this.email || !this.password || !this.name || !this.phoneNumber || this.selectedPaymentMethods.length === 0) {
         alert('Por favor, complete todos los campos obligatorios.');
         return;
       }
@@ -40,16 +39,23 @@ export default {
         paymentMethods: this.selectedPaymentMethods.map(method => method.name),
       };
 
-      const response = await axios.post('http://localhost:3000/accounts', userData);
-      if (response.data.success) {
-        alert('Registro Exitoso');
-      } else {
-        alert('Error en el registro. El correo electrónico ya está en uso o se produjo un error.');
+      const userApiService = new UserApiService();
+
+      try {
+        const response = await userApiService.registerUser(userData);
+        if (response.data.success) {
+          alert('Registro Exitoso');
+        } else {
+          alert('Error en el registro. El correo electrónico ya está en uso o se produjo un error.');
+        }
+      } catch (error) {
+        alert('Error en el registro. Por favor, inténtelo nuevamente.');
       }
     },
   },
 };
 </script>
+
 
 <template>
   <div class="container-register">
