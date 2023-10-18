@@ -1,5 +1,5 @@
 <script>
-import axios from "axios";
+import {UserApiService} from "@/services/user-api.service";
 
 export default{
   name:"login",
@@ -12,7 +12,10 @@ export default{
   methods: {
     async attemptLogin() {
       try {
-        const response = await axios.get(`http://localhost:3000/accounts?email=${this.email}&password=${this.password}`);
+        const response = await UserApiService.getUserByEmailAndPassword(
+            this.email,
+            this.password
+        );
 
         if (response.data.length > 0) {
 
