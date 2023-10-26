@@ -12,6 +12,7 @@ const i18n= createI18n({
             membership:'Membership',
             profile:'Profile',
             exit:'exit',
+
             restaurant1:'Name Restaurant 1',
             restaurant2:'Name Restaurant 2',
             restaurant3:'Name Restaurant 3',
@@ -72,6 +73,8 @@ const i18n= createI18n({
             membership:'Membresía',
             profile:'Perfil',
             exit:'Salir',
+
+
             restaurant1:'Nombre Restaurante 1',
             restaurant2:'Nombre Restaurante 2',
             restaurant3:'Nombre Restaurante 3',
@@ -115,7 +118,7 @@ const i18n= createI18n({
             explore:'Mira los restaurantes que esten mas cerca de ti:',
             food:'Eston son los plata mas pedidos por nuestros usuarios',
             food1:'Pollo a la brasa',
-            food2:'Makis',
+            food2:'Sushi',
             food3:'Ceviche',
             food11:'El maki sushi es por tanto un rollo de alga nori relleno de arroz y distintos ingredientes como pescado, marisco, frutas o verduras',
             food22:'Pollo a la brasa es la denominación que se da en el Perú al pollo asado al carbón, a la leña o a gas en un sistema rotatorio',
