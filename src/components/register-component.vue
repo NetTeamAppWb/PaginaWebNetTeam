@@ -1,5 +1,5 @@
 <script>
-import axios from "axios";
+import {UserApiService} from "@/services/user-api.service";
 
 export default {
   name:"register",
@@ -40,14 +40,21 @@ export default {
         paymentMethods: this.selectedPaymentMethods.map(method => method.name),
       };
 
-      const response = await axios.post('http://localhost:3000/accounts', userData);
-      if (response.data.success) {
-        alert('Registro Exitoso');
-      } else {
-        alert('Error en el registro. El correo electrónico ya está en uso o se produjo un error.');
+      const userApiService = new UserApiService();
+
+      try {
+        const response = await userApiService.registerUser(userData);
+
+        if (response.success) {
+          alert('Registro Exitoso');
+        } else {
+          alert('Error en el registro. El correo electrónico ya está en uso o se produjo un error.');
+        }
+      } catch (error) {
+        alert('Error en el registro. Comprueba la conexión o inténtalo más tarde.');
       }
     },
-  },
+    },
 };
 </script>
 

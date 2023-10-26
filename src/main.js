@@ -16,6 +16,12 @@ import Textarea from 'primevue/textarea';
 import Calendar from 'primevue/calendar';
 
 
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import ColumnGroup from 'primevue/columngroup';   // optional
+import Row from 'primevue/row';                   // optional
+
+
 import router from "@/router";
 
 const app= createApp(App);
@@ -31,6 +37,11 @@ app.component('MultiSelect', MultiSelect);
 app.component('Textarea', Textarea);
 app.component("Card", Card);
 app.component("Calendar", Calendar);
+
+app.component("DataTable", DataTable);
+app.component("Column", Column);
+app.component("ColumnGroup", ColumnGroup);
+app.component("Row", Row);
 
 app.mount('#app')
 

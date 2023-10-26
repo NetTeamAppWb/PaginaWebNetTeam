@@ -2,17 +2,215 @@
   "accounts": [
     {
       "email": "jorgito@gmail.com",
-      "password": "euibuhbcd",
+      "password": "jorgitocomidas23",
       "name": "Jorgito",
-      "address": "miraflores",
-      "phoneNumber": "983412673",
-      "description": "hola me gusta mucho jugar en la play station",
-      "age": "32",
+      "address": "Miraflores-Lima",
+      "phoneNumber": "923752567",
+      "description": "Hola, mi nombre es Jorgito y me gusta mucho la comida típica del Perú.",
+      "age": "24",
       "paymentMethods": [
-        "Paypal"
+        "Yape",
+        "Plin"
       ],
       "id": 1
     }
   ],
-  "restaurants": []
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Bocado Veloz",
+      "foods": [
+        {
+          "name": "Hamburguesa Carne",
+          "price": "9 soles",
+          "description": "Deliciosa hamburguesa de carne con todos los ingredientes frescos."
+        },
+        {
+          "name": "Hamburguesa Pollo",
+          "price": "8 soles",
+          "description": "Una hamburguesa de pollo tierna y sabrosa con aderezos únicos."
+        },
+        {
+          "name": "Hamburguesa Lomo Saltado",
+          "price": "11 soles",
+          "description": "Inspirada en el clásico lomo saltado peruano, esta hamburguesa es una deliciosa fusión de sabores."
+        }
+      ],
+      "schedule": "03:00 PM - 11:00 PM",
+      "location": "Tomas Valle",
+      "owner": "José Pérez",
+      "payment-methods": [
+        "Efectivo",
+        "Plin",
+        "Yape"
+      ],
+      "calls": "912357890",
+      "img": "https://cdn.sanity.io/images/jsdrzfkj/production-esmx/5e2316cc629ede9cd6646163efeafc5486161751-6240x4160.jpg?w=800&h=533&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Pizzería Bella Napoli",
+      "foods": [
+        {
+          "name": "Pizzas",
+          "price": "Desde 12 soles hasta 27 soles",
+          "description": "Pida cualquier pizza que este dentro de nuestro menu."
+        },
+        {
+          "name": "Pastas",
+          "price": "Desde 14 soles hasta 26 soles",
+          "description": "Disfrute de nuestras pastas,como la clasica lasaña,espagueti carbonara."
+        },
+        {
+          "name": "Aperitivos",
+          "price": "Desde 5 soles hasta 9 soles",
+          "description": "Pida su pan de ajo, palitos de mozzorella y mas."
+        }
+      ],
+      "schedule": "04:00 AM - 10:00 PM",
+      "location": "Avenida Brazil",
+      "owner": "Marco Rossi",
+      "payment-methods": [
+        "Efectivo",
+        "Yape",
+        "Plin"
+      ],
+      "calls": "987654321",
+      "img": "https://recetinas.com/wp-content/uploads/2020/08/pizzas-caseras.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pez Bravo",
+      "foods": [
+        {
+          "name": "Ceviche",
+          "price": "Desde 12 soles",
+          "description": "Sabor fresco y auténtico en cada bocado. Orgullo gastronómico peruano."
+        },
+        {
+          "name": "Chicharron Calamar",
+          "price": "Desde 15 soles",
+          "description": "Disfrute de nuestro chicharron de calamar."
+        },
+        {
+          "name": "Jalea",
+          "price": "Desde 20 soles hasta 32 soles",
+          "description": "Pida entre personal,mixta o familiar y disfrute."
+        }
+      ],
+      "schedule": "11:00 AM - 03:00 PM",
+      "location": "Miraflores",
+      "owner": "Frank Rodriguez",
+      "payment-methods": [
+        "Efectivo",
+        "Yape",
+        "Plin"
+      ],
+      "calls": "916346294",
+      "img": "https://peru21.pe/resizer/E64TvI2EA_Zjm4Lpl9ZE2OiD4Es=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/W2LFE57F3ZGUVM4BKFS2QM4LCI.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Excelencia",
+      "foods": [
+        {
+          "name": "Pollos",
+          "price": "Desde 24 soles hasta 64 soles",
+          "description": "Disfrute de un excelente pollo a la braza junto con su porcion de papas y ensalada."
+        },
+        {
+          "name": "Parrillas",
+          "price": "Desde 23 soles hasta 72 soles",
+          "description": "Parrilla para 2, Parrilla Familiar, Mega Parrilla."
+        },
+        {
+          "name": "Almuerzos",
+          "price": "Desde 11 soles hasta 29 soles",
+          "description": "Menu para almuerzo."
+        }
+      ],
+      "schedule": "11:00 AM - 11:00 PM",
+      "location": "Independencia",
+      "owner": "Belen Caceres",
+      "payment-methods": [
+        "Efectivo",
+        "Yape",
+        "Plin",
+        "Tarjeta Credito"
+      ],
+      "calls": "908543235",
+      "img": "https://gestion.pe/resizer/VjTlzwbaNJxeXxb16mat11b7o_8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IDESCGWU7VCLZEB7WLSMS6GU2I.jpg"
+    }
+  ],
+  "history": [
+    {
+      "id": 1,
+      "name": "Excelencia",
+      "category": "Polleria",
+      "img": "https://gestion.pe/resizer/VjTlzwbaNJxeXxb16mat11b7o_8=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/IDESCGWU7VCLZEB7WLSMS6GU2I.jpg",
+      "foods": [
+        {
+          "name": "Pollos",
+          "price": "Desde 24 soles hasta 64 soles",
+          "description": "Disfrute de un excelente pollo a la braza junto con su porcion de papas y ensalada."
+        },
+        {
+          "name": "Parrillas",
+          "price": "Desde 23 soles hasta 72 soles",
+          "description": "Parrilla para 2, Parrilla Familiar, Mega Parrilla."
+        },
+        {
+          "name": "Almuerzos",
+          "price": "Desde 11 soles hasta 29 soles",
+          "description": "Menu para almuerzo."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pez Bravo",
+      "category": "Pescado",
+      "img": "https://peru21.pe/resizer/E64TvI2EA_Zjm4Lpl9ZE2OiD4Es=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/W2LFE57F3ZGUVM4BKFS2QM4LCI.jpeg",
+      "foods": [
+        {
+          "name": "Ceviche",
+          "price": "Desde 12 soles",
+          "description": "Sabor fresco y auténtico en cada bocado. Orgullo gastronómico peruano."
+        },
+        {
+          "name": "Chicharron Calamar",
+          "price": "Desde 15 soles",
+          "description": "Disfrute de nuestro chicharron de calamar."
+        },
+        {
+          "name": "Jalea",
+          "price": "Desde 20 soles hasta 32 soles",
+          "description": "Pida entre personal,mixta o familiar y disfrute."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bocado Veloz",
+      "category": "Hamburguesas",
+      "img": "https://cdn.sanity.io/images/jsdrzfkj/production-esmx/5e2316cc629ede9cd6646163efeafc5486161751-6240x4160.jpg?w=800&h=533&fit=crop",
+      "foods": [
+        {
+          "name": "Hamburguesa Carne",
+          "price": "9 soles",
+          "description": "Deliciosa hamburguesa de carne con todos los ingredientes frescos."
+        },
+        {
+          "name": "Hamburguesa Pollo",
+          "price": "8 soles",
+          "description": "Una hamburguesa de pollo tierna y sabrosa con aderezos únicos."
+        },
+        {
+          "name": "Hamburguesa Lomo Saltado",
+          "price": "11 soles",
+          "description": "Inspirada en el clásico lomo saltado peruano, esta hamburguesa es una deliciosa fusión de sabores."
+        }
+      ]
+    }
+  ]
 }
