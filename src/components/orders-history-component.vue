@@ -1,4 +1,4 @@
-<script>
+c<script>
 import ToolbarRestaurants from "@/components/toolbar-component.vue";
 import axios from "axios";
 
