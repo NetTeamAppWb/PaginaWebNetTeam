@@ -61,41 +61,41 @@ export default {
 <template>
   <div class="container-register">
     <pv-card>
-      <template #title>Register</template>
+      <template #title>{{$t("title_register")}}</template>
       <template #content>
         <form @submit="registerUser">
           <div class="form-group">
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">{{$t("register1")}}</label>
             <pv-input-text v-model="email" id="email" placeholder="Correo electrónico" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="password">Contraseña:</label>
+            <label for="password">{{$t("register2")}}</label>
             <pv-input-text v-model="password" id="password" placeholder="Contrasenia" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="name">Nombre:</label>
+            <label for="name">{{$t("register3")}}</label>
             <pv-input-text v-model="name" id="name" placeholder="Name" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="address">Dirección:</label>
+            <label for="address">{{$t("register4")}}</label>
             <pv-input-text v-model="address" id="address" placeholder="Address" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="phoneNumber">Número de Teléfono:</label>
+            <label for="phoneNumber">{{$t("register5")}}</label>
             <pv-input-text v-model="phoneNumber" id="phoneNumber" placeholder="PhoneNumber" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="age">Edad:</label>
+            <label for="age">{{$t("register6")}}</label>
             <pv-input-text v-model="age" id="age" placeholder="Age" style="margin-left: 20px;"></pv-input-text>
           </div>
 
           <div class="form-group">
-            <label for="paymentMethods">Métodos de Pago:</label>
+            <label for="paymentMethods">{{$t("register7")}}</label>
             <MultiSelect
                 v-model="selectedPaymentMethods"
                 :options="paymentMethods"
@@ -110,10 +110,10 @@ export default {
             <Textarea v-model="description" id="description" rows="5" cols="30" placeholder="Descripción tus gustos"></Textarea>
           </div>
 
-          <button type="submit" class="btn-register">Registrarse</button>
+          <button type="submit" class="btn-register">{{$t("register8")}}</button>
         </form>
 
-        <p style="margin-top: 23px;margin-left: 45px;">¿Ya tienes una cuenta? <router-link to="/">Inicia sesión aquí</router-link>.</p>
+        <p style="margin-top: 23px;margin-left: 45px;">{{$t("register9")}} <router-link to="/">{{$t("register10")}}</router-link>.</p>
       </template>
     </pv-card>
   </div>
