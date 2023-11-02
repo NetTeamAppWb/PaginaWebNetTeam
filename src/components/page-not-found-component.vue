@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="not-found">
-    <label class="message">{{$t("titlepage")}}</label>
+    <label class="message">{{$t("title_page")}}</label>
     <button @click="redirectToHome" class="centered-button">{{$t("page")}}</button>
   </div>
 </template>

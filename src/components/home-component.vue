@@ -13,14 +13,14 @@
         <div class="card-container">
         <Card class="card-item">
             <template #header>
-                <img alt="user header" src="@/assets/sushi.jpg"/>
+                <img alt="user header" src="@/assets/burguir.jpg"/>
             </template>
-            <template #title>{{$t("food2")}} </template>
+            <template #title>{{$t("food1")}} </template>
             <template #content>
-                <p>{{$t("food11")}}</p>
+                <p>{{$t("description_food1")}}</p>
             </template>
             <template #footer>
-                <pv-button icon="pi pi-check" label="Order" />
+                <pv-button icon="pi pi-check" label="Review" @click="redirectrestaurants"/>
             </template>
         </Card>
 
@@ -28,12 +28,12 @@
             <template #header>
                 <img alt="user header" src="@/assets/pollo.jpg"/>
             </template>
-            <template #title>{{$t("food1")}} </template>
+            <template #title>{{$t("food2")}} </template>
             <template #content>
-                <p>{{$t("food22")}}</p>
+                <p>{{$t("description_food2")}}</p>
             </template>
             <template #footer>
-                <pv-button icon="pi pi-check" label="Order" />
+                <pv-button icon="pi pi-check" label="Review" @click="redirectrestaurants"/>
             </template>
         </Card>
 
@@ -43,10 +43,10 @@
             </template>
             <template #title>{{$t("food3")}} </template>
             <template #content>
-              <p>{{$t("food33")}}</p>
+              <p>{{$t("description_food3")}}</p>
             </template>
             <template #footer>
-              <pv-button icon="pi pi-check" label="Order" />
+              <pv-button icon="pi pi-check" label="Review" @click="redirectrestaurants"/>
             </template>
           </Card>
         </div>
@@ -67,6 +67,11 @@ export default defineComponent({
             center: { lat: -12.090539, lng: -77.029576 },
         };
     },
+  methods: {
+    redirectrestaurants() {
+      this.$router.push('/restaurants');
+    }
+  }
 });
 </script>
 

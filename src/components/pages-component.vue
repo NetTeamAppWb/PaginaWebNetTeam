@@ -1,160 +1,133 @@
 <script>
 import ToolbarRestaurants from "@/components/toolbar-component.vue";
-
 export default{
   name:"pages",
   components: {ToolbarRestaurants},
-    data() {
-        return {
-            plans: [
-                {
-                    title: "Basic",
-
-                    price: "US$7.99",
-                    features: [
-                        "View restaurants",
-                        "2TB Cloud Storage",
-                    ],
-                    link: "#",
-                },
-                {
-                    title: "Startup",
-
-                    price: "US$14.99",
-                    features: [
-                        "All functions in basic",
-                        "Promotions tailored to you",
-                        "15TB Cloud Storage",
-                    ],
-                    link: "#",
-                },
-                {
-                    title: "Enterprise",
-
-                    price: "US$25.99",
-                    features: [
-                        "All platform features",
-                        "Ad-free experience",
-                        "Qualify as entrepreneurs",
-                    ],
-                    link: "#",
-                },
-            ],
-        };
-    },
 };
-
 </script>
 
 <template>
   <header>
-    <ToolbarRestaurants/>
+    <ToolbarRestaurants />
   </header>
-    <div class="plan-section">
-        <div class="contenedor">
-            <div class="tabla" v-for="plan in plans" :key="plan.title">
-                <h2>{{ plan.title }}</h2>
-                <h3>{{ plan.price }}</h3>
-                <p v-for="feature in plan.features" :key="feature">{{ feature }}</p>
-                <pv-button icon="pi pi-check" label="Pay" />
+  <div class="card-container">
+    <Card>
+      <template #title>
+        <h1 style="font-size: 36px; font-weight: bold; color: orangered; margin-bottom: 20px;">{{$t("title_pages")}}</h1>
+      </template>
+      <template #content>
+        <div class="card-content">
+          <div class="card-image">
+            <img src="@/assets/membre.png" alt="Imagen de membresía" />
+          </div>
+          <div class="plan-section">
+            <div class="content">
+              <div class="tabla">
+                <h2>{{$t("pages1")}}</h2>
+                <h3>{{$t("pages2")}}</h3>
+                <p>{{$t("pages3")}}</p>
+                <pv-button icon="pi pi-check" label="Suscribirse" />
+              </div>
+              <div class="tabla">
+                <h2>{{$t("pages4")}}</h2>
+                <h3>{{$t("pages5")}}</h3>
+                <p>{{$t("pages6")}}</p>
+                <pv-button icon="pi pi-check" label="Suscribirse" />
+              </div>
+              <div class="tabla">
+                <h2>{{$t("pages7")}}</h2>
+                <h3>{{$t("pages8")}}</h3>
+                <p>{{$t("pages9")}}</p>
+                <pv-button icon="pi pi-check" label="Suscribirse" />
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-
-
+      </template>
+      <template #footer>
+        <p class="emotional">{{$t("pages10")}}</p>
+      </template>
+    </Card>
+  </div>
 </template>
 
 
 <style scoped>
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 86vh;
+}
+.card-content {
+  display: flex;
+  align-items: center;
+}
+.card-image {
+  flex: 1;
+  padding: 20px;
+}
+.card-image img {
+  max-width: 100%;
+}
 .plan-section {
-
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-
-.contenedor {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background: #000000;
+.content {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: orange;
+  border: 1px solid black;
+  border-radius: 10px;
 }
-
 .tabla {
-    width: 33%;
-    height: 550px;
-    margin: auto;
-    border: 1px solid #fdfbfb;
-    border-radius: 4px;
-    box-shadow: 0px 0px 4px 0px #000000;
-    padding: 60px;
-    text-align: center;
-    flex-grow: 1;
-    color: #000000;
-    font-family: 'Outfit', sans-serif;
-    flex-direction: column;
+  width: 33%;
+  height: 550px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 60px;
+  text-align: center;
+  flex-grow: 1;
+  color: #f8f9fc;
+  font-family: 'Outfit', sans-serif;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.2s all;
+  border: 1px solid white;
 }
-
-.tabla h2 {
-    color: #f8f9fc;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.tabla img {
-    color: #f8f9fc;
-    width: 144px;
-    margin-bottom: 35px;
-}
-
-.tabla h3 {
-    color: #f8f9fc;
-    font-size: 35px;
-    margin-bottom: 20px;
-}
-
-.tabla p {
-    color: #f8f9fc;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.boton {
-    display: inline-block;
-    padding: 12px;
-    border: 1px solid #fdfbfb;
-    background: #000000;
-    text-decoration: none;
-    color: #ffffff;
-    border-radius: 100px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    margin: auto;
-}
-
-.boton:hover {
-    background: #efefef;
-    color: #020405;
-    transition: 0.2s all;
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
 .tabla:hover {
-    background: #f3a703;
-    color: #110101;
-    transition: 0.2s all;
-    transform: scale(1.1);
-    cursor: pointer;
+  background: #f3a703;
+  color: #110101;
+  transform: scale(1.1);
+}
+.tabla h2,
+.tabla h3,
+.tabla p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f8f9fc;
+}
+.tabla h3 {
+  font-size: 25px;
 }
 
+.emotional{
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+}
 @media screen and (max-width: 1000px) {
     .tabla {
         width: 45%;
@@ -163,7 +136,6 @@ export default{
         margin-bottom: 40px;
     }
 }
-
 @media screen and (max-width: 700px) {
     .tabla {
         width: 55%;

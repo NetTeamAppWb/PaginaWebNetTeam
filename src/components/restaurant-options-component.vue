@@ -21,6 +21,11 @@ export default{
           console.error("Error fetching restaurants: " + error);
         });
   },
+  methods: {
+    redirecthistory() {
+      this.$router.push('/orders-history');
+    }
+  }
 };
 
 </script>
@@ -54,7 +59,7 @@ export default{
           </div>
         </template>
         <template #footer>
-          <pv-button icon="pi pi-check" label="Order" />
+          <pv-button icon="pi pi-check" label="Order" @click="redirecthistory"/>
         </template>
       </Card>
     </div>

@@ -19,5 +19,10 @@ export class UserApiService{
     getRestaurants() {
         return axios.get(`${BASE_URL}/restaurants`);
     }
-
+    fetchHistory() {
+        return axios.get(`${this.BASE_URL}/history`);
+    }
+    fetchProfileData() {
+        return axios.get(`${this.BASE_URL}/accounts`);
+    }
 }

@@ -31,7 +31,7 @@ export default {
   </header>
   <div class="content">
     <Card class="photos">
-      <template #title>Ofertas del dia</template>
+      <template #title>{{$t("title_offers")}}</template>
       <template #content>
         <div class="image-container">
           <img src="@/assets/offers1.jpg" alt="photo1" class="image1" />
@@ -47,11 +47,11 @@ export default {
   </div>
   <div class="overlay" v-if="showOverlay"></div>
   <div class="membership-popup" v-if="showOverlay">
-    <h2>¡Únete a nuestra membresía!</h2>
-    <p>Obtén acceso a ofertas exclusivas.</p>
+    <h2>{{$t("offers1")}}</h2>
+    <p>{{$t("offers2")}}</p>
     <div class="button-container">
-      <button class="join-button" @click="redirectToMembershipPage">Unirse a la membresía</button>
-      <button class="close-button" @click="closePopup">Cerrar</button>
+      <button class="join-button" @click="redirectToMembershipPage">{{$t("offers3")}}</button>
+      <button class="close-button" @click="closePopup">{{$t("offers4")}}</button>
     </div>
   </div>
 </template>
