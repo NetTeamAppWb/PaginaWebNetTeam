@@ -54,6 +54,25 @@ const i18n= createI18n({
             profile4:'Address: ',
             profile5:'Age: ',
             profile6:'Description: ',
+
+            title_login:'Login Now',
+            login1:'Email: ',
+            login2:'Password: ',
+            login3:'Login',
+            login4:'You don t have an account? ',
+            login5:'Register',
+
+            title_register:'Register',
+            register1:'Email: ',
+            register2:'Password: ',
+            register3:'Name: ',
+            register4:'Address: ',
+            register5:'Cell phone number: ',
+            register6:'Age: ',
+            register7:'Payment methods: ',
+            register8:'End Registration',
+            register9:'Do you already have an account? ',
+            register10:'Sign in here',
         },
         es:{
             namelog:'EmprendeChef',
@@ -106,6 +125,25 @@ const i18n= createI18n({
             profile4:'Direccion: ',
             profile5:'Edad: ',
             profile6:'Descripción: ',
+
+            title_login:'Inicia sesión ahora',
+            login1:'Correo Electronico: ',
+            login2:'Contraseña: ',
+            login3:'Iniciar Sesion',
+            login4:'No tienes una cuenta? ',
+            login5:' Registrate ',
+
+            title_register:'Registrate',
+            register1:'Correo Electronico: ',
+            register2:'Contraseña: ',
+            register3:'Nombre: ',
+            register4:'Direccion: ',
+            register5:'Numero de celular: ',
+            register6:'Edad: ',
+            register7:'Metodos de pago: ',
+            register8:'Terminar Registro',
+            register9:'¿Ya tienes una cuenta? ',
+            register10:'Inicia sesión aquí',
         }
     }
 })
