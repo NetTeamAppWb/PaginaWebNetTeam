@@ -1,6 +1,6 @@
 c<script>
 import ToolbarRestaurants from "@/components/toolbar-component.vue";
-import axios from "axios";
+import {UserApiService} from "@/services/user-api.service";
 
 export default {
   name:"orders-history",
@@ -14,19 +14,19 @@ export default {
     this.fetchHistory();
   },
   methods: {
-    fetchHistory() {
-      axios.get('http://localhost:3000/history')
-          .then((response) => {
-            this.history = response.data.map(history => ({
-              name: history.name,
-              img: history.img,
-              category: history.category,
-              food: history.foods[0],
-            }));
-          })
-          .catch((error) => {
-            console.error('Error fetching data:', error);
-          });
+    async fetchHistory() {
+      try {
+        const orderHistoryService = new UserApiService();
+        const response = await orderHistoryService.fetchHistory();
+        this.history = response.data.map(history => ({
+          name: history.name,
+          img: history.img,
+          category: history.category,
+          food: history.foods[0],
+        }));
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     },
   },
 };
@@ -40,7 +40,7 @@ export default {
     <DataTable :value="history" tableStyle="min-width: 50rem" :selectionMode="null" class="custom-table">
       <template #header>
         <div class="flex flex-wrap align-items-center justify-content-between gap-2">
-          <span class="text-xl text-900 font-bold">Restaurants</span>
+          <span class="text-xl text-900 font-bold">{{$t("orders_his")}}</span>
         </div>
       </template>
       <Column field="name" header="Name"></Column>
@@ -78,7 +78,7 @@ export default {
           </button>
         </template>
       </Column>
-      <template #footer> In total there are {{ history ? history.length : 0 }} restaurants. </template>
+      <template #footer> {{$t("orders_part1")}} {{ history ? history.length : 0 }} {{$t("orders_part2")}} </template>
     </DataTable>
   </div>
 </template>
